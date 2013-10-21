@@ -1,0 +1,15 @@
+
+all : libalgo mytree
+DEPS = algo_api.h
+libobjects = create_bst.o moriss-tree.o queue.c stack.o
+treeobj = trees.o
+%.o : LIBFLAG = -ggdb -shared -fPIC
+%.o : CFLAG = -ggdb 
+
+libalgo : $(libobjects)
+	gcc $(LIBFLAG) -o libalgo $(libobjects) -lrt
+
+mytree : $(treeobj)
+	gcc $(CFLAG) -o mytree $(treeobj) -lrt
+
+
