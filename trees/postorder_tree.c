@@ -74,7 +74,7 @@ non_recur_postorder_with_visit_flag(tree_node_t *node)
 static void
 non_recur_postorder_using_stack (tree_node_t *node)
 {
-    tree_node_t            *n = node;
+    tree_node_t            *n = node, *p;
 
     while (n) {
         if (n->left || n->right) {

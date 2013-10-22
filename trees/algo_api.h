@@ -30,6 +30,7 @@ int ll_enqueue(void *n);
 void *ll_dequeue();
 void stack_test ();
 
+void  breadth_traverse (tree_node_t *node);
 void  add_node_to_binary_search_tree(int value, tree_node_t *node);
 void  moriss_inorder_tree_traversal (tree_node_t  *rnode);
 void  inorder_traverse_or_successor(int traversal_type, int successor);
