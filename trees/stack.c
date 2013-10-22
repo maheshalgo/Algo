@@ -28,7 +28,7 @@ stack_push(void *elem)
         } else {
             e->next = NULL;
         }
-        g_stack_head = elem;
+        g_stack_head = e;
     }
 }
 
@@ -50,5 +50,19 @@ stack_pop()
     return(elem);
 }
 
+void
+stack_test ()
+{
+   int   i, *j;
+
+   for (i = 1 ; i < 6; i++) {
+       stack_push((void*)i);
+   }
+   j = stack_pop();
+   while(j != NULL) {
+       printf ("%d ", (int)j);
+       j = stack_pop();
+   }
+}
 
 
